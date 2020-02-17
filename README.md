@@ -1,5 +1,19 @@
-Marlin 3D Printer Firmware
+Marlin 3D Printer Firmware (built for Ultimaker 2/2+)
 ==========================
+
+Updated by [samy kamkar](https://samy.pl)
+
+**This firmware allows your Ultimaker 2/2+ extruder fan to ONLY turn on when the extruder reaches > 40C.**
+
+Binary firmware that you can upload from Cura is [here](Marlin.hex), source is updated.
+
+Requires an interposer board (or deadbug circuit) to sit between the fan connector (originally connected to J34 in the middle of the board, remove this) and the free J9/Analog connector. Requires 330 Ohm (or similar) and 2N2222 NPN (or similar).
+
+Leave FAN/J34 port empty as that's hardwired to 5V, and we'll use the spare "Analog" port to control the fan.
+
+![interposer schematic](images/schematic.png)
+
+![Ultimaker 2 PCB](images/um2board.png)
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ErikZalm&url=https://github.com/ErikZalm/Marlin&title=Marlin&language=&tags=github&category=software)
 
